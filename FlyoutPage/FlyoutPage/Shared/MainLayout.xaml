@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="FlyoutPage.MainLayout"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FlyoutPage"
+    >
+    <Shell.FlyoutBackground>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#304762" Offset="0.1" />
+            <GradientStop Color="#558574" Offset="0.6" />
+            <GradientStop Color="#73B49D" Offset="1.0" />
+        </LinearGradientBrush>
+    </Shell.FlyoutBackground>
+    
+    <Shell.FlyoutHeader>
+        <StackLayout  Margin="10,20,0,10" HorizontalOptions="Center" >
+            <!--<Image Source="amatallah.jpeg" Aspect="AspectFill">
+                    <Image.Clip>
+                        <EllipseGeometry RadiusX="60" RadiusY="60" Center="60,60"/>
+                    </Image.Clip>
+                </Image>-->
+            <Frame CornerRadius="45" HorizontalOptions="Center" Padding="0">
+                <Image Source="amatallah.jpeg" HeightRequest="90" WidthRequest="90" Aspect="AspectFill"/>
+            </Frame>
+            <Label Text="Zekiri Amatallah"  FontSize="18" TextColor="White" Margin="0,10,0,0"/>
+            <Label Text="6eme 2022-2023"  FontSize="12" TextColor="White" HorizontalOptions="Center" Margin="0,10,0,0"/>
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
+    <!--<Shell.ItemTemplate>
+        <DataTemplate>
+            <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="10, 10, 0, 10">
+                <Image Source="{Binding Icon}" HeightRequest="30" Margin="10,0" />
+                <Label Text="{Binding Title}" TextColor="White" FontSize="18" VerticalOptions="Center" HorizontalOptions="Start" />
+            </StackLayout>
+        </DataTemplate>
+    </Shell.ItemTemplate>-->
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label"  Class="FlyoutItemLabelStyle">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="HeightRequest" Value="100" />
+            </Style>
+
+            <Style TargetType="Image"  Class="FlyoutItemImageStyle">
+                <Setter Property="Aspect" Value="Fill" />
+            </Style>
+
+            <Style TargetType="Layout"
+       Class="FlyoutItemLayoutStyle"
+       ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor"
+            Value="Teal" />
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Shell.TabBarIsVisible="False">
+        <ShellContent Title="Cahier de textes" Icon="babyicon.png"  ContentTemplate="{DataTemplate local:page1}"/>
+        <ShellContent Title="Notes" Icon="contraticon.png" ContentTemplate="{DataTemplate local:page2}" />
+        <ShellContent Title="Compétences" Icon="reporticon.png" ContentTemplate="{DataTemplate local:page2}" />
+        <ShellContent Title="Vie scolaire" Icon="mapicon.png" ContentTemplate="{DataTemplate local:page2}" />
+        <ShellContent Title="Me déconnecter" Icon="logouticon.png" ContentTemplate="{DataTemplate local:page2}" />
+    </FlyoutItem>
+</Shell>
