@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TabbedPage.MainLayout"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TabbedPage"
+    >
+    <Shell.FlyoutBackground>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#304762" Offset="0.1" />
+            <GradientStop Color="#558574" Offset="0.6" />
+            <GradientStop Color="#73B49D" Offset="1.0" />
+        </LinearGradientBrush>
+    </Shell.FlyoutBackground>
+    
+    <Shell.FlyoutHeader>
+        <StackLayout  Margin="10,20,0,10" HorizontalOptions="Center" >
+            <Frame CornerRadius="45" HorizontalOptions="Center" Padding="0">
+                <Image Source="amatallah.jpeg" HeightRequest="90" WidthRequest="90" Aspect="AspectFill"/>
+            </Frame>
+            <StackLayout  Margin="5" HorizontalOptions="Center" >
+                <Label Text="Zekiri Amatallah"  FontSize="18" TextColor="White" Margin="0,10,0,0"/>
+                <Label Text="6 eme | 2022-2023"  FontSize="12" TextColor="White" HorizontalOptions="Center" Margin="0,10,0,0"/>
+            </StackLayout>
+        </StackLayout>
+    </Shell.FlyoutHeader>
+    
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label"  Class="FlyoutItemLabelStyle">
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <FlyoutItem Title="Notes" Icon="contraticon.png">
+        <Tab Title="1er trimestre" Icon="babyicon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:page1}" />
+        </Tab>
+        <Tab Title="2ème trimestre" Icon="mapicon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:page2}" />
+        </Tab>
+        <Tab Title="3ème trimestre" Icon="profileicon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:page3}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Compétences" Icon="reporticon.png">
+        <ShellContent  ContentTemplate="{DataTemplate local:page5}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Vie scolaire" Icon="mapicon.png">
+        <ShellContent ContentTemplate="{DataTemplate local:page2}" />
+    </FlyoutItem>
+    
+     <MenuItem Text="Help" IconImageSource="note.png"></MenuItem>
+    
+    <Shell.FlyoutFooter>
+        <Label Text="Zekiri Amatallah"  FontSize="18" TextColor="White" Margin="0,10,0,0"/>
+    </Shell.FlyoutFooter>
+    
+</Shell>
