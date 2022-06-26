@@ -33,7 +33,7 @@
         </ResourceDictionary>
     </Shell.Resources>
 
-    <FlyoutItem Title="Notes" Icon="contraticon.png">
+    <!--<FlyoutItem Title="Notes" Icon="contraticon.png">
         <Tab Title="1er trimestre" Icon="babyicon.png">
             <ShellContent ContentTemplate="{DataTemplate local:page1}" />
         </Tab>
@@ -57,6 +57,15 @@
     
     <Shell.FlyoutFooter>
         <Label Text="Zekiri Amatallah"  FontSize="18" TextColor="White" Margin="0,10,0,0"/>
-    </Shell.FlyoutFooter>
-    
+    </Shell.FlyoutFooter>-->
+
+
+    <TabBar>
+        <Tab Title="Tab1" Icon="reporticon.png" Shell.NavBarIsVisible="False" >
+            <ShellContent Title="text1" Icon="reporticon.png" ContentTemplate="{DataTemplate local:page1}" />
+            <ShellContent Title="text2" Icon="babyicon.png" ContentTemplate="{DataTemplate local:page2}" />
+        </Tab>
+        <ShellContent Title="Tab2" Icon="mapicon.png" ContentTemplate="{DataTemplate local:page1}" />
+    </TabBar>
+
 </Shell>

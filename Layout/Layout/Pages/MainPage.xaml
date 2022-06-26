@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Layout.MainPage">
+
+    <VerticalStackLayout>
+        <HorizontalStackLayout VerticalOptions="Start">
+            <BoxView Color="Red" WidthRequest="30" HeightRequest="30" Margin="0,0,50,0"/>
+            <BoxView Color="Blue" WidthRequest="30" HeightRequest="30" Margin="0,0,50,0"/>
+            <BoxView Color="Green" WidthRequest="30" HeightRequest="30" Margin="0,0,50,0"/>
+        </HorizontalStackLayout >
+        <Label Text="&#10;"/>
+        <VerticalStackLayout HorizontalOptions="Start">
+            <BoxView Color="Red" WidthRequest="30" HeightRequest="30" Margin="0,0,0,50"/>
+            <BoxView Color="Blue" WidthRequest="30" HeightRequest="30" Margin="0,0,0,50"/>
+            <BoxView Color="Green" WidthRequest="30" HeightRequest="30" Margin="0,0,0,50"/>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+
+    <!--<ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/MyStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        
+            <Style x:Key="HBoxStyle" TargetType="BoxView" >
+                <Setter Property="WidthRequest" Value="30" />
+                <Setter Property="HeightRequest" Value="30" />
+                <Setter Property="Margin" Value="0,0,50,0" />
+            </Style>
+            <Style x:Key="VBoxStyle" TargetType="BoxView">
+                <Setter Property="WidthRequest" Value="30" />
+                <Setter Property="HeightRequest" Value="30" />
+                <Setter Property="Margin" Value="0,0,0,50" />
+            </Style>
+        </ContentPage.Resources>
+        <ScrollView>
+            <VerticalStackLayout>
+
+                <HorizontalStackLayout VerticalOptions="Start">
+                    <BoxView Color="Red" Style="{StaticResource HBoxStyle}"  />
+                    <BoxView Color="Blue" Style="{StaticResource HBoxStyle}" />
+                    <BoxView Color="Green" Style="{StaticResource HBoxStyle}" />
+                </HorizontalStackLayout >
+                <Label Text="&#10;"/>
+                <VerticalStackLayout HorizontalOptions="Start">
+                    <BoxView Color="Red" Style="{StaticResource VBoxStyle}"  />
+                    <BoxView Color="Blue" Style="{StaticResource VBoxStyle}"  />
+                    <BoxView Color="Green" Style="{StaticResource VBoxStyle}"  />
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>-->
+
+
+        <!--<ContentPage.Resources>
+        <StyleSheet Source="/Resources/styles.css" />
+        <StyleSheet>
+            <![CDATA[
+            .hboxstyle {
+                width: 30;
+                height: 30;
+                margin-right: 50;
+            }            
+            .vboxstyle {
+                width: 30;
+                height: 30;
+                margin-top: 50;
+            }
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+    
+    <ScrollView>
+        <VerticalStackLayout>            
+            <HorizontalStackLayout VerticalOptions="Start">
+                <BoxView Color="Red" StyleClass="hboxstyle"/>
+                <BoxView Color="Blue" StyleClass="hboxstyle"/>
+                <BoxView Color="Green" StyleClass="hboxstyle"/>
+            </HorizontalStackLayout >
+            <Label Text="&#10;"/>
+            <VerticalStackLayout HorizontalOptions="Start">
+                <BoxView Color="Red" StyleClass="vboxstyle" />
+                <BoxView Color="Blue" StyleClass="vboxstyle" />
+                <BoxView Color="Green" StyleClass="vboxstyle" />
+            </VerticalStackLayout>            
+        </VerticalStackLayout>
+    </ScrollView>-->   
+</ContentPage>
