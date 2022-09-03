@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ViewComponent"
+             x:Class="ViewComponent.MainPage">
+    
+    <ContentPage.BindingContext>
+        <local:MainPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <StackLayout>
+            <StackLayout RadioButtonGroup.GroupName="A">
+                <Label Text="What's your favorite animal?" />
+                <RadioButton Content="Cat"  />
+                <RadioButton Content="Dog" />
+            </StackLayout>
+
+            <StackLayout RadioButtonGroup.GroupName="B">
+                <Label Text="What's your favorite animal?" />
+                <RadioButton Content="Elephant"  />
+                <RadioButton Content="Monkey"  IsChecked="true" />
+            </StackLayout>
+            
+        </StackLayout>
+    </ScrollView>
+ 
+</ContentPage>

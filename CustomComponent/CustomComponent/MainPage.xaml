@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CustomComponent"
+             xmlns:Components="clr-namespace:CustomComponent.Components"
+             x:Class="CustomComponent.MainPage"
+             Title="MainPageSend">
+
+    <ScrollView>
+    
+        <HorizontalStackLayout>
+
+            <VerticalStackLayout>
+                <Entry x:Name="Entry1" FontSize="25" HeightRequest="60" WidthRequest="200" VerticalOptions="Start"></Entry>
+                <Button Text="Send" Clicked="Button_Clicked"></Button>
+            </VerticalStackLayout>
+            
+            <Components:MyLabelCompnoent/>
+            
+        </HorizontalStackLayout>
+        
+    </ScrollView>
+    
+</ContentPage>
+
+
+
+
+<!--<Components:MyLabelCompnoent MColorArg="#D23817"  MTextArg="Label1111"/>
+            <Components:MyLabelCompnoent MColorArg="#1F17D2"  MTextArg="Label2222"/>-->
+
+            <!--<Components:MyLabelCompnoent>
+                <x:Arguments>
+                    <x:String>Label1</x:String>
+                    <x:String>#D23817</x:String>
+                </x:Arguments>
+            </Components:MyLabelCompnoent>
+
+            <Components:MyLabelCompnoent>
+                <x:Arguments>
+                    <x:String>Label2</x:String>
+                    <x:String>#1F17D2</x:String>
+                </x:Arguments>
+            </Components:MyLabelCompnoent>-->
+        

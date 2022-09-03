@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Layout.MainPage">
 
-    <VerticalStackLayout>
+    <!--<VerticalStackLayout>
         <HorizontalStackLayout VerticalOptions="Start">
             <BoxView Color="Red" WidthRequest="30" HeightRequest="30" Margin="0,0,50,0"/>
             <BoxView Color="Blue" WidthRequest="30" HeightRequest="30" Margin="0,0,50,0"/>
@@ -15,7 +15,7 @@
             <BoxView Color="Blue" WidthRequest="30" HeightRequest="30" Margin="0,0,0,50"/>
             <BoxView Color="Green" WidthRequest="30" HeightRequest="30" Margin="0,0,0,50"/>
         </VerticalStackLayout>
-    </VerticalStackLayout>
+    </VerticalStackLayout>-->
 
     <!--<ContentPage.Resources>
         <ResourceDictionary>
@@ -53,7 +53,7 @@
         </ScrollView>-->
 
 
-        <!--<ContentPage.Resources>
+    <!--<ContentPage.Resources>
         <StyleSheet Source="/Resources/styles.css" />
         <StyleSheet>
             <![CDATA[
@@ -85,5 +85,49 @@
                 <BoxView Color="Green" StyleClass="vboxstyle" />
             </VerticalStackLayout>            
         </VerticalStackLayout>
-    </ScrollView>-->   
+    </ScrollView>-->
+
+    <!--<AbsoluteLayout Margin="40">
+        <BoxView Color="Red"
+             AbsoluteLayout.LayoutFlags="PositionProportional"
+             AbsoluteLayout.LayoutBounds="0.5, 0, 100, 100"
+             Rotation="30" />
+        <BoxView Color="Green"
+             AbsoluteLayout.LayoutFlags="PositionProportional"
+             AbsoluteLayout.LayoutBounds="0.5, 0, 100, 100"
+             Rotation="60" />
+        <BoxView Color="Blue"
+             AbsoluteLayout.LayoutFlags="PositionProportional"
+             AbsoluteLayout.LayoutBounds="0.5, 0, 100, 100" />
+    </AbsoluteLayout>-->
+
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label  Grid.Row="0" Grid.Column="0" Text="00" BackgroundColor="Red"/>
+        <Label  Grid.Row="1" Grid.Column="0" Text="10" BackgroundColor="Blue"/>
+        <Label  Grid.Row="2" Grid.Column="0" Text="20" BackgroundColor="Green"/>
+
+        <Label  Grid.Row="0" Grid.Column="1" Text="01" BackgroundColor="Yellow"/>
+        <Label  Grid.Row="1" Grid.Column="1" Text="11" BackgroundColor="Aqua"/>
+        <Label  Grid.Row="2" Grid.Column="1" Text="21" BackgroundColor="CadetBlue"/>
+
+    </Grid>-->
+
+
+    <FlexLayout Direction="Row" >
+        <BoxView Color="Red" FlexLayout.Basis="30%"/>
+        <BoxView Color="Yellow" FlexLayout.Basis="70%"/>
+    </FlexLayout> 
+    
+    
+
 </ContentPage>
