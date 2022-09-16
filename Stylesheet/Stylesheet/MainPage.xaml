@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Stylesheet.MainPage">
+    
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Hello, World!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Welcome to .NET Multi-platform App UI"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Danger"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" 
+                />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+    <!-- 
+    2 
+    <ContentPage.Resources>
+        
+        <Style x:Key="btn" TargetType="Button">
+            <Setter Property="FontFamily" Value="Roboto,Helvetica Neue,Arial,sans-serif"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="12,8"/>
+            <Setter Property="CornerRadius" Value="3"/>
+        </Style>
+        
+        <Style x:Key="btn-danger" TargetType="Button" BasedOn="{StaticResource btn}">
+            <Setter Property="TextColor" Value="#fff"/>
+            <Setter Property="Background" Value="#d9534f"/>
+            <Setter Property="BorderColor" Value="#d43f3a"/>
+            <Style.Triggers>
+                <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#ac2925"/>
+                    <Setter Property="BorderColor" Value="#ac2925"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </ContentPage.Resources>
+    
+    الدرس الاول 
+    <ContentPage.Resources>
+        <StyleSheet Source="/Resources/Css/Styles.css"/>
+       
+       <StyleSheet>
+            <![CDATA[
+            ^contentpage {
+                background-color: lightgray;
+            }
+            ]]>
+        </StyleSheet>
+    
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout StyleClass="verticalStackLayout" Spacing="25">
+            <Image StyleClass="image1"
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"/>
+
+            <Label StyleClass="label1" 
+                   Text="Hello, World!" 
+                   SemanticProperties.HeadingLevel="Level1" />
+
+            <Label StyleClass="label2"
+                Text="Welcome to .NET Multi-platform App UI"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"/>
+
+            <Button StyleClass="button1"
+                x:Name="CounterBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                />
+
+            
+        </VerticalStackLayout>
+    </ScrollView>-->
+</ContentPage>

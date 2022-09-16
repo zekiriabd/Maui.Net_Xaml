@@ -1,0 +1,37 @@
+﻿.verticalStackLayout {
+    padding: 30 0;
+    text-align: center;
+}
+
+.image1 {
+    height: 200;
+}
+
+.label1 {
+    font-size: 32;
+}
+
+.label2 {
+    font-size: 18;
+}
+
+.button1 {
+    width: 300;
+}
+
+navigationpage {
+    -maui-bar-background-color: #770553;
+}
+
+^contentpage {
+    background-color: #770553;
+}
+
+Button {
+    background-color: #F9CAEA;
+    color: #000000;
+    font-family: OpenSansRegular;
+    font-size: 14;
+    border-radius: 8;
+    Padding: 14 10;
+}   

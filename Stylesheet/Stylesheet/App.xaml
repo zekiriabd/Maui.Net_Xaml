@@ -1,0 +1,72 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Stylesheet"
+             x:Class="Stylesheet.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        
+<!--
+        <Color x:Key="LightColor">WhiteSmoke</Color>
+        <Color x:Key="DarkColor">Black</Color>
+        <Color x:Key="RedColor">#d9534f</Color>
+        <Color x:Key="blueColor">Blue</Color>
+        
+        <Style TargetType="ScrollView">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush>
+                        <GradientStop 
+                            Color="{AppThemeBinding Light={StaticResource LightColor}, Dark={StaticResource RedColor}}"
+                            Offset="0"/>
+                        <GradientStop 
+                            Color="{AppThemeBinding Light={StaticResource LightColor}, Dark={StaticResource blueColor}}"
+                            Offset="0.75" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Roboto,Helvetica Neue,Arial,sans-serif"/>
+            <Setter Property="TextColor" 
+                    Value="{AppThemeBinding Light={StaticResource DarkColor}, Dark={StaticResource LightColor}}" />
+        </Style>
+        
+        <Style x:Key="btn" TargetType="Button">
+            <Setter Property="FontFamily" Value="Roboto,Helvetica Neue,Arial,sans-serif"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="12,8"/>
+            <Setter Property="CornerRadius" Value="3"/>
+        </Style>
+
+        <Style x:Key="btn-danger" TargetType="Button" BasedOn="{StaticResource btn}">
+            <Setter Property="TextColor" Value="#fff"/>            
+            <Setter Property="Background" 
+            Value="{AppThemeBinding Light={StaticResource blueColor}, Dark={StaticResource RedColor}}" />
+            
+            <Setter Property="BorderColor" 
+                    Value="{AppThemeBinding 
+                Light={StaticResource RedColor}, 
+                Dark={StaticResource blueColor},
+                }
+                " />
+            
+            <Style.Triggers>
+                <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#ac2925"/>
+                    <Setter Property="BorderColor" Value="#ac2925"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+-->
+
+        <!--<StyleSheet  Source="/Resources/Css/StylesLight.css"/>-->
+    </Application.Resources>
+</Application>
