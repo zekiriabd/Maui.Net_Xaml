@@ -1,23 +1,34 @@
-using CommunityToolkit.Mvvm.ComponentModel;
-using CustomComponent.Models;
-using System;
 
 namespace CustomComponent.Components;
 
 public partial class MyLabelCompnoent : ContentView
 {
-    public MyLabelCompnoent()
-	{
-		InitializeComponent();
-        MyLabelCompnoentVM myLabelCompnoentVM = new MyLabelCompnoentVM();
-        MessagingCenter.Subscribe<Page, LabelM>(this, "MyMessage", (sender,arg) =>
-        {
-            Label1.Text = arg.MText;
-            Label1.TextColor = arg.MColor;
-            Border1.Stroke = arg.MColor;
-        });
+    public MyLabelCompnoent() 
+    {
+        InitializeComponent();
+    }
+
+    private void CounterBtn_Clicked(object sender, EventArgs e)
+    {
+        var labelM = ApplicationState.GetInstance().LabelMessage;
+        Label1.Text = labelM.MText;
+        Label1.TextColor = labelM.MColor;
     }
 }
+//{
+//	InitializeComponent();
+//   public MyLabelCompnoent()
+//{
+//	InitializeComponent();
+//       MyLabelCompnoentVM myLabelCompnoentVM = new MyLabelCompnoentVM();
+//       MessagingCenter.Subscribe<Page, LabelM>(this, "MyMessage", (sender,arg) =>
+//       {
+//           Label1.Text = arg.MText;
+//           Label1.TextColor = arg.MColor;
+//           Border1.Stroke = arg.MColor;
+//       });
+//   }
+
 
 /*
 public partial class MyLabelCompnoentVM : ObservableObject

@@ -15,7 +15,3 @@ public static class MauiProgram
         return builder.Build();
 	}
 }
-
-4.1
--1.4
-

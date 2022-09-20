@@ -30,11 +30,16 @@
 
             <Button
                 x:Name="CounterBtn"
+                Style="{StaticResource btn-danger}"
                 Text="Danger"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+                SemanticProperties.Hint="Counts the number of times you click"                
                 HorizontalOptions="Center" 
                 />
+
+            <Switch x:Name="Switch1" Toggled="Switch1_Toggled"/>
+
+
+
 
         </VerticalStackLayout>
     </ScrollView>

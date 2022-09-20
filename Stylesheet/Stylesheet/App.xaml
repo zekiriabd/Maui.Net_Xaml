@@ -4,14 +4,13 @@
              xmlns:local="clr-namespace:Stylesheet"
              x:Class="Stylesheet.App">
     <Application.Resources>
-        <ResourceDictionary>
+        <!--<ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-        
-<!--
+        </ResourceDictionary>-->
+
         <Color x:Key="LightColor">WhiteSmoke</Color>
         <Color x:Key="DarkColor">Black</Color>
         <Color x:Key="RedColor">#d9534f</Color>
@@ -53,9 +52,7 @@
             <Setter Property="BorderColor" 
                     Value="{AppThemeBinding 
                 Light={StaticResource RedColor}, 
-                Dark={StaticResource blueColor},
-                }
-                " />
+                Dark={StaticResource blueColor}}" />
             
             <Style.Triggers>
                 <Trigger TargetType="Button" Property="IsPressed" Value="True">
@@ -65,7 +62,7 @@
             </Style.Triggers>
         </Style>
 
--->
+
 
         <!--<StyleSheet  Source="/Resources/Css/StylesLight.css"/>-->
     </Application.Resources>

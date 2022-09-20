@@ -14,9 +14,10 @@
                 <Entry x:Name="Entry1" FontSize="25" HeightRequest="60" WidthRequest="200" VerticalOptions="Start"></Entry>
                 <Button Text="Send" Clicked="Button_Clicked"></Button>
             </VerticalStackLayout>
-            
+            <StackLayout BackgroundColor="Beige">
             <Components:MyLabelCompnoent/>
-            
+            </StackLayout>
+
         </HorizontalStackLayout>
         
     </ScrollView>

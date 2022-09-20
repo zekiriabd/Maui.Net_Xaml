@@ -11,9 +11,16 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
     }
-	private void Button_Clicked(object sender, EventArgs e)
-	{
-		LabelM labelM = new() { MText = Entry1.Text, MColor = Colors.Red };
-        MessagingCenter.Send<Page, LabelM>(this, "MyMessage", labelM);
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        var labelM = ApplicationState.GetInstance().LabelMessage;
+        labelM.MText = Entry1.Text;
+        labelM.MColor = Colors.Red;
     }
+
+    //private void Button_Clicked(object sender, EventArgs e)
+    //{
+    //	LabelM labelM = new() { MText = Entry1.Text, MColor = Colors.Red };
+    //  MessagingCenter.Send<Page, LabelM>(this, "MyMessage", labelM);
+    //}
 }

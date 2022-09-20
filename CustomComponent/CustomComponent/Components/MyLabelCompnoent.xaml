@@ -16,7 +16,14 @@
                 FontSize="32"  
                 HorizontalOptions="Center" />
         </Border>
-        
+        <Button
+                x:Name="CounterBtn"
+                Text="Get App Stat Value"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="CounterBtn_Clicked"
+                HorizontalOptions="Center" />
+
+
     </VerticalStackLayout>
 </ContentView>
 

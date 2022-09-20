@@ -1,24 +1,31 @@
-﻿using Microsoft.Maui.Controls.StyleSheets;
+﻿using Microsoft.Maui.ApplicationModel;
+using Microsoft.Maui.Controls.StyleSheets;
 
 namespace Stylesheet;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
 	public MainPage()
 	{
 		InitializeComponent();
-	}
-
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		//using (var reader = new StringReader("/Resources/Css/StylesLight.css"))
-		//{
-  //          this.Resources.Add(StyleSheet.FromReader(reader));
-  //      }
+        string IsDarktheme = SecureStorage.Default.GetAsync("IsDarktheme").Result;
+        if (!string.IsNullOrEmpty(IsDarktheme))
+        {
+            Switch1.IsToggled = Convert.ToBoolean(IsDarktheme);
+        }
     }
 
-
+	private void Switch1_Toggled(object sender, ToggledEventArgs e)
+	{
+		if (e.Value)
+		{
+			Application.Current.UserAppTheme = AppTheme.Dark;
+		}
+		else
+		{
+			Application.Current.UserAppTheme = AppTheme.Light;
+		}
+        SecureStorage.Default.SetAsync("IsDarktheme", e.Value.ToString());
+    }
 }
 
