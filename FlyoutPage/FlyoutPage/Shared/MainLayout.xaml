@@ -1,3 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlyoutPage.MainLayout">
     <TabBar>
         <ShellContent Title="test1" Icon="reporticon.png" ContentTemplate="{DataTemplate local:page3}" />
         <Tab Title="test2" Icon="reporticon.png" Shell.NavBarIsVisible="False" Shell.FlyoutItemIsVisible="False" >
@@ -6,3 +10,4 @@
         </Tab>
         <ShellContent Title="test3" Icon="reporticon.png" ContentTemplate="{DataTemplate local:page3}" />
     </TabBar>
+</Shell>

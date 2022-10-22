@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:JsonFileCRUD"
+             x:Class="JsonFileCRUD.MainPage">
+
+
+    <ContentPage.BindingContext>
+        <local:MainPageVM/>
+    </ContentPage.BindingContext>
+    
+    <ScrollView>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Users}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding FirstName}" Detail="{Binding LastName}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Command="{Binding InitTextCommand}" Text="Init Text" />
+            <Editor Text="{Binding DataResourceText}" HeightRequest="200"></Editor>
+            <Button Command="{Binding WriteFileCommand}" Text="Save"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
