@@ -48,19 +48,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiImage Remove="Resources\Images\amatallah.jpeg" />
-	  <MauiImage Remove="Resources\Images\babyicon.png" />
-	  <MauiImage Remove="Resources\Images\contraticon.png" />
-	  <MauiImage Remove="Resources\Images\dotnet_bot.svg" />
-	  <MauiImage Remove="Resources\Images\editpicicon.png" />
-	  <MauiImage Remove="Resources\Images\emergencyicon.png" />
-	  <MauiImage Remove="Resources\Images\logouticon.png" />
-	  <MauiImage Remove="Resources\Images\mapicon.png" />
-	  <MauiImage Remove="Resources\Images\profileicon.png" />
-	  <MauiImage Remove="Resources\Images\reporticon.png" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <None Remove="Resources\Images\amatallah.jpeg" />
 	  <None Remove="Resources\Images\BabyIcon.png" />
 	  <None Remove="Resources\Images\contratIcon.png" />
@@ -73,44 +60,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <EmbeddedResource Include="Resources\Images\amatallah.jpeg">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="Resources\Images\babyicon.png">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="Resources\Images\contraticon.png">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
-	  <EmbeddedResource Include="Resources\Images\editpicicon.png">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="Resources\Images\emergencyicon.png">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="Resources\Images\logouticon.png">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="Resources\Images\mapicon.png">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="Resources\Images\profileicon.png">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="Resources\Images\reporticon.png">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </EmbeddedResource>
-	</ItemGroup>
-
-	<ItemGroup>
 	  <MauiXaml Update="Pages\page1.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Pages\page2.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Pages\page3.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
@@ -119,6 +69,39 @@
 	  <Compile Update="Shared\MainLayout.xaml.cs">
 	    <DependentUpon>MainLayout.xaml</DependentUpon>
 	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Update="Resources\Images\amatallah.jpeg">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\babyicon.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\contraticon.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\editpicicon.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\emergencyicon.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\logouticon.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\mapicon.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\profileicon.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Update="Resources\Images\reporticon.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </MauiImage>
 	</ItemGroup>
 
 </Project>
