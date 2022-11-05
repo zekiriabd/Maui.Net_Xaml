@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SqliteDemo.Pages.PointsList"
+             xmlns:local="clr-namespace:SqliteDemo.Pages"
+             Title="PointsList">
+
+    <VerticalStackLayout>
+        <ListView x:Name="listView" SelectionMode="Single" ItemsSource="{Binding Points}" Margin="5" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:PointRow Title="{Binding Title}" Date="{Binding Date}" Point="{Binding Point}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+    
+</ContentPage>

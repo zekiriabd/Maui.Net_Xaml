@@ -39,7 +39,6 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -52,8 +51,10 @@
 	  <None Remove="Resources\Images\amatallah.jpeg" />
 	  <None Remove="Resources\Images\babyicon.png" />
 	  <None Remove="Resources\Images\contraticon.png" />
+	  <None Remove="Resources\Images\dotnet_bot.svg" />
 	  <None Remove="Resources\Images\editpicicon.png" />
 	  <None Remove="Resources\Images\emergencyicon.png" />
+	  <None Remove="Resources\Images\logo.png" />
 	  <None Remove="Resources\Images\logouticon.png" />
 	  <None Remove="Resources\Images\mapicon.png" />
 	  <None Remove="Resources\Images\profileicon.png" />
@@ -61,7 +62,46 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2" />
+	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+	  <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.2" />
+	  <PackageReference Include="SQLitePCLRaw.core" Version="2.1.2" />
+	  <PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.2" />
+	  <PackageReference Include="SQLitePCLRaw.provider.sqlite3" Version="2.1.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Pages\Index.xaml.cs">
+	    <DependentUpon>Index.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Shared\LyoutMenu.xaml.cs">
+	    <DependentUpon>LyoutMenu.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="App.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Index.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\PointsList.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Point\PointRow.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Point\PointsList.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Shared\LyoutHeader.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Shared\LyoutMenu.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Shared\MainLayout.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

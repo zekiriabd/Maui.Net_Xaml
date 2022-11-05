@@ -3,28 +3,27 @@
     x:Class="SqliteDemo.MainLayout"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:SqliteDemo"
-    >
+    xmlns:Pages="clr-namespace:SqliteDemo.Pages"
+    xmlns:Shared="clr-namespace:SqliteDemo.Shared">
+    
+    <Shell.TitleView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="1" Source="logo.png" WidthRequest="50" Margin="0,0,20,0"/>
+        </Grid>        
+    </Shell.TitleView>
+    
     <Shell.FlyoutBackground>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="#304762" Offset="0.1" />
+            <GradientStop Color="#304762" Offset="0.3" />
             <GradientStop Color="#558574" Offset="0.6" />
             <GradientStop Color="#73B49D" Offset="1.0" />
         </LinearGradientBrush>
     </Shell.FlyoutBackground>
-
-    <Shell.FlyoutHeader>
-        <StackLayout  Margin="10,20,0,10" HorizontalOptions="Center" >
-            <Frame CornerRadius="45" HorizontalOptions="Center" Padding="0">
-                <Image Source="amatallah.jpeg" HeightRequest="90" WidthRequest="90" Aspect="AspectFill"/>
-            </Frame>
-            <StackLayout  Margin="5" HorizontalOptions="Center" >
-                <Label Text="Zekiri Amatallah"  FontSize="18" TextColor="White" Margin="0,10,0,0"/>
-                <Label Text="6eme 2022-2023"  FontSize="12" TextColor="White" HorizontalOptions="Center" Margin="0,10,0,0"/>
-            </StackLayout>
-        </StackLayout>
-    </Shell.FlyoutHeader>
-
+    
     <Shell.Resources>
         <ResourceDictionary>
             <Style TargetType="Label"  Class="FlyoutItemLabelStyle">
@@ -33,11 +32,23 @@
         </ResourceDictionary>
     </Shell.Resources>
 
+    <Shell.FlyoutHeader>
+        <Shared:LyoutHeader/>
+    </Shell.FlyoutHeader>
+
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Shell.TabBarIsVisible="False">
-        <ShellContent Title="Cahier de textes" Icon="babyicon.png"  ContentTemplate="{DataTemplate local:page1}"/>
-        <ShellContent Title="Notes" Icon="contraticon.png" ContentTemplate="{DataTemplate local:page1}" />
-        <ShellContent Title="Compétences" Icon="reporticon.png" ContentTemplate="{DataTemplate local:page1}" />
-        <ShellContent Title="Vie scolaire" Icon="mapicon.png" ContentTemplate="{DataTemplate local:page1}" />
-        <ShellContent Title="Me déconnecter" Icon="logouticon.png" ContentTemplate="{DataTemplate local:page1}" />
+        <ShellContent Title="Cahier de textes" Icon="babyicon.png"  ContentTemplate="{DataTemplate Pages:Index}" />
+        <ShellContent Title="Notes" Icon="contraticon.png" ContentTemplate="{DataTemplate Pages:PointsList}" />
+        <ShellContent Title="Compétences" Icon="reporticon.png" ContentTemplate="{DataTemplate Pages:Index}" />
+        <ShellContent Title="Vie scolaire" Icon="mapicon.png" ContentTemplate="{DataTemplate Pages:Index}" />
     </FlyoutItem>
+    
+    <Shell.FlyoutFooter>
+       <HorizontalStackLayout Padding="25">
+            <Image Source="logouticon.png" WidthRequest="25"/>
+            <Label Text="Me déconnecter" TextColor="White" Margin="10,0,0,0" />
+       </HorizontalStackLayout>
+    </Shell.FlyoutFooter>
+    
+
 </Shell>
