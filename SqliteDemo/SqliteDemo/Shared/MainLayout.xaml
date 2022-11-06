@@ -5,7 +5,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:Pages="clr-namespace:SqliteDemo.Pages"
     xmlns:Shared="clr-namespace:SqliteDemo.Shared">
-    
     <Shell.TitleView>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -42,13 +41,11 @@
         <ShellContent Title="Compétences" Icon="reporticon.png" ContentTemplate="{DataTemplate Pages:Index}" />
         <ShellContent Title="Vie scolaire" Icon="mapicon.png" ContentTemplate="{DataTemplate Pages:Index}" />
     </FlyoutItem>
-    
+
     <Shell.FlyoutFooter>
-       <HorizontalStackLayout Padding="25">
+        <HorizontalStackLayout Padding="25">
             <Image Source="logouticon.png" WidthRequest="25"/>
             <Label Text="Me déconnecter" TextColor="White" Margin="10,0,0,0" />
-       </HorizontalStackLayout>
+        </HorizontalStackLayout>
     </Shell.FlyoutFooter>
-    
-
 </Shell>

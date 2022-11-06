@@ -9,6 +9,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="8*"/>
                 <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="40"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="35"/>
@@ -17,10 +18,9 @@
 
             <Label Grid.Row="0" Grid.Column="0" Text="{Binding Title}" FontAttributes="Bold" TextTransform="Uppercase" />
             <Label Grid.Row="0" Grid.Column="1" Text="{Binding Point}" HorizontalOptions="End"/>
+            <Button Grid.Row="0" Grid.Column="2" Text="X" BackgroundColor="#dc3545" Clicked="Button_Clicked"/>
             <Label Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Date}"/>
-        </Grid>
-        
-        <BoxView HeightRequest="1" BackgroundColor="#ced4da"
-                             IsVisible="{Binding .,Converter={StaticResource separatorVisibilityConverter}, ConverterParameter={x:Reference Name=listView}}"/>
-    </VerticalStackLayout>
+            
+          </Grid>
+        </VerticalStackLayout>
 </ViewCell>

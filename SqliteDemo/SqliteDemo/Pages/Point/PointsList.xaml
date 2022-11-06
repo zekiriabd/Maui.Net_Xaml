@@ -6,10 +6,12 @@
              Title="PointsList">
 
     <VerticalStackLayout>
-        <ListView x:Name="listView" SelectionMode="Single" ItemsSource="{Binding Points}" Margin="5" >
-            <ListView.ItemTemplate>
+        <Button Text="Add" Clicked="Button_Clicked" WidthRequest="60" HorizontalOptions="Start" BackgroundColor="#1b6ec2"></Button>
+        <ListView x:Name="listView" SelectionMode="Single" ItemsSource="{Binding Points}" Margin="5"
+                  ItemTapped="listView_ItemTapped">
+           <ListView.ItemTemplate>
                 <DataTemplate>
-                    <local:PointRow Title="{Binding Title}" Date="{Binding Date}" Point="{Binding Point}"/>
+                    <local:PointRow Id="{Binding Id}" Title="{Binding Title}" Date="{Binding Date}" Point="{Binding Point}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

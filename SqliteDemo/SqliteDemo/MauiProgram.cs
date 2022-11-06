@@ -1,4 +1,5 @@
 ﻿using SqliteDemo.Pages;
+using SqliteDemo.Pages.Point;
 using SqliteDemo.Services;
 using SqliteDemo.Services.Interfaces;
 
@@ -6,7 +7,8 @@ namespace SqliteDemo;
 
 public static class MauiProgram
 {
-	public static MauiApp CreateMauiApp()
+    public static IServiceProvider ServiceProvider;
+    public static MauiApp CreateMauiApp()
 	{
         var builder = MauiApp.CreateBuilder();
 		builder
@@ -17,12 +19,12 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
+        builder.Services.AddSingleton<PointDetailVM>();
+        builder.Services.AddSingleton<PointsListVM>();
         builder.Services.AddSingleton<IPointService, PointService>();
 
-        builder.Services.AddSingleton<PointsListVM>();
-
-        builder.Services.AddSingleton<PointsList>();        
-
-        return builder.Build();
+        var app = builder.Build();
+        ServiceProvider = app.Services;
+        return app;
     }
 }
