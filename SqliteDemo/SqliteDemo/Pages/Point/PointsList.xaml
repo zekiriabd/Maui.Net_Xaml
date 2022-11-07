@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SqliteDemo.Pages.PointsList"
              xmlns:local="clr-namespace:SqliteDemo.Pages"
-             Title="PointsList">
+             Title="PointsList"
+             x:Name="Parent"
+             >
 
     <VerticalStackLayout>
         <Button Text="Add" Clicked="Button_Clicked" WidthRequest="60" HorizontalOptions="Start" BackgroundColor="#1b6ec2"></Button>
@@ -11,7 +13,7 @@
                   ItemTapped="listView_ItemTapped">
            <ListView.ItemTemplate>
                 <DataTemplate>
-                    <local:PointRow Id="{Binding Id}" Title="{Binding Title}" Date="{Binding Date}" Point="{Binding Point}"/>
+                    <local:PointRow />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

@@ -49,10 +49,9 @@ public partial class PointsListVM : ObservableObject
         Points = await _PointService.GetAllPoints();
     }
 
-    public async Task Delete(int id)
+    public async Task Delete(PointModel point)
     {
-        var point = Points.FirstOrDefault(x => x.Id == id);
         await _PointService.DeletePoint(point);
-        RefreshPointList();
+        await RefreshPointList();
     }
 }
