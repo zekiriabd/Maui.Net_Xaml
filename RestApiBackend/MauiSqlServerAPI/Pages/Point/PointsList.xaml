@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFrontendApp.Pages.PointsList"
+             xmlns:local="clr-namespace:MauiFrontendApp.Pages"
+             Title="PointsList">
+
+    <VerticalStackLayout>
+        <Button Text="Add" Clicked="Button_Clicked" WidthRequest="60" HorizontalOptions="Start" BackgroundColor="#1b6ec2"></Button>
+        <ListView x:Name="listView" SelectionMode="Single" ItemsSource="{Binding Points}" Margin="5"
+                  ItemTapped="listView_ItemTapped">
+           <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:PointRow />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+    
+</ContentPage>

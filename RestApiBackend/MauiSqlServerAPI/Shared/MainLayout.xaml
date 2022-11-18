@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiFrontendApp.MainLayout"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Pages="clr-namespace:MauiFrontendApp.Pages"
+    xmlns:Shared="clr-namespace:MauiFrontendApp.Shared">
+    <Shell.TitleView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="1" Source="logo.png" WidthRequest="50" Margin="0,0,20,0"/>
+        </Grid>        
+    </Shell.TitleView>
+    
+    <Shell.FlyoutBackground>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#304762" Offset="0.3" />
+            <GradientStop Color="#558574" Offset="0.6" />
+            <GradientStop Color="#73B49D" Offset="1.0" />
+        </LinearGradientBrush>
+    </Shell.FlyoutBackground>
+    
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label"  Class="FlyoutItemLabelStyle">
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <Shell.FlyoutHeader>
+        <Shared:LyoutHeader/>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Shell.TabBarIsVisible="False">
+        <ShellContent Title="Cahier de textes" Icon="babyicon.png"  ContentTemplate="{DataTemplate Pages:Index}" />
+        <ShellContent Title="Notes" Icon="contraticon.png" ContentTemplate="{DataTemplate Pages:PointsList}" />
+        <ShellContent Title="Compétences" Icon="reporticon.png" ContentTemplate="{DataTemplate Pages:Index}" />
+        <ShellContent Title="Vie scolaire" Icon="mapicon.png" ContentTemplate="{DataTemplate Pages:Index}" />
+    </FlyoutItem>
+
+    <Shell.FlyoutFooter>
+        <HorizontalStackLayout Padding="25">
+            <Image Source="logouticon.png" WidthRequest="25"/>
+            <Label Text="Me déconnecter" TextColor="White" Margin="10,0,0,0" />
+        </HorizontalStackLayout>
+    </Shell.FlyoutFooter>
+</Shell>
